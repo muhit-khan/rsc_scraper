@@ -1,0 +1,21 @@
+{
+  "name": "rsc_scraper",
+  "type": "module",
+  "scripts": {
+    "chrome.mocha": "wdio run ./configs/chrome.mocha.conf.js",
+    "fire:safety": "wdio run ./configs/chrome.mocha.conf.js --spec ./test/specs/FireSafety.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "@babel/register": "^7.23.7",
+    "@wdio/allure-reporter": "^8.34.0",
+    "@wdio/cli": "^9.2.1",
+    "@wdio/local-runner": "^9.2.1",
+    "@wdio/mocha-framework": "^8.35.0",
+    "@wdio/spec-reporter": "^8.32.4",
+    "chai": "^5.1.0",
+    "fs-extra": "^11.2.0",
+    "winston": "^3.13.0"
+  }
+}

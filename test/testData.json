@@ -1,0 +1,7 @@
+{
+    "downloadConfig": {
+        "downloadDir": "downloads",
+        "downloadTimeout": 5000,
+        "scrollPauseTime": 2000
+    }
+}
