@@ -1,4 +1,3 @@
-
 import Timeouts from '../constants/Timeouts.js';
 import Logger from '../utils/Logger.js';
 import { Dialog, File, IFrame, Window } from './entities/index.js';
@@ -106,7 +105,20 @@ class Browser {
     Logger.info(`Wait for ${timeout} delay`);
     return this.#getBrowser().pause(timeout);
   }
+
+
+
+  /**
+   * Execute JavaScript in the browser context
+   * @param {string} script - JavaScript code to execute
+   * @param {...any} args - Arguments to pass to the script
+   * @returns {Promise<any>} - Result of the script execution
+   */
+  async execute(script, ...args) {
+    Logger.info(`Executing script: ${script}`);
+    return this.#getBrowser().execute(script, ...args);
+  }
 };
 
-
-export default new Browser(browser);
+// Create and export a single instance
+export default new Browser();
